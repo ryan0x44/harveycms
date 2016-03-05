@@ -1,0 +1,6 @@
+hash: b4e218ab496f40db8a681d692f1b83a5283d62dc3cf6a7c6d6588d3a515982f3
+updated: 2016-03-05T18:24:16.768944707+11:00
+imports:
+- name: github.com/manyminds/api2go
+  version: 0f0aba686fffe91897ee4b7e1d682efbfcbac7fd
+devImports: []
