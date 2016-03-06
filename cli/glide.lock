@@ -1,8 +1,10 @@
-hash: 2dd6faed16dce1ceec613548701c33e1cce16a8137eb8e82d4273eb283d968a4
-updated: 2016-03-06T16:47:13.508113145+11:00
+hash: baa3472d959d748dacc961c330d0650d9c52cb2836efea6fc3c5f05b4453dd5a
+updated: 2016-03-06T17:28:40.982686224+11:00
 imports:
 - name: github.com/go-sql-driver/mysql
   version: 0f2db9e6c9cff80a97ca5c2c5096242cc1554e16
+- name: github.com/inconshreveable/mousetrap
+  version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
 - name: github.com/jinzhu/gorm
   version: f8377d80bf0d73b981c7ec39b7483776feedf79b
 - name: github.com/jinzhu/inflection
@@ -14,9 +16,13 @@ imports:
 - name: github.com/manyminds/api2go
   version: 0f0aba686fffe91897ee4b7e1d682efbfcbac7fd
 - name: github.com/ryan0x44/harveycms
-  version: ef8686c8a2b4da79e672edbe62f5b02ce257e32f
+  version: 48c4e62a25a2d3da1cdf1bb34849a8d7c44c6c57
   subpackages:
   - core
 - name: github.com/spf13/cobra
   version: 65a708cee0a4424f4e353d031ce440643e312f92
+- name: github.com/spf13/pflag
+  version: 7f60f83a2c81bc3c3c0d5297f61ddfa68da9d3b7
+- name: github.com/toml-lang/toml
+  version: 3968af5460e176f1fa14f199af83de03f70cde95
 devImports: []
