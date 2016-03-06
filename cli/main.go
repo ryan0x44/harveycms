@@ -1,17 +1,22 @@
+// Copyright © 2016 Ryan D <ryan0x44.com>
 package main
 
 import (
 	"fmt"
-	"github.com/ryan0x44/harveycms/core"
+	"github.com/spf13/cobra"
+	"os"
 )
 
-func main() {
-	fmt.Println("cli app")
-	fmt.Println("initialising database")
-	dbInit()
+var MainCmd = &cobra.Command{
+	Use:   "harvey-cli",
+	Short: "Harvey CLI is a task runner for Harvey CMS",
+	Long:  `Task runner for Harvey CMS <http://www.harveycms.org>`,
 }
 
-func dbInit() {
-	db := core.DbConnect("dev:password@/harveycms?charset=utf8&parseTime=True&loc=Local")
-	db.CreateTable(&core.Route{})
+func main() {
+	MainCmd.AddCommand(dbInitCmd)
+	if err := MainCmd.Execute(); err != nil {
+		fmt.Println(err)
+		os.Exit(-1)
+	}
 }
