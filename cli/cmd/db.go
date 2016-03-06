@@ -1,12 +1,12 @@
 // Copyright © 2016 Ryan D <ryan0x44.com>
-package main
+package cmd
 
 import (
 	"github.com/ryan0x44/harveycms/core"
 	"github.com/spf13/cobra"
 )
 
-var dbInitCmd = &cobra.Command{
+var DbInitCmd = &cobra.Command{
 	Use:   "db:init",
 	Short: "Initialise database",
 	Long:  `Creates database and all required tables.`,
