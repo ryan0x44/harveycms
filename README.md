@@ -9,14 +9,16 @@ This project aims to implement a simple, elegant and easy-to-use CMS which is se
 
 ## Architecture
 
-Harvey consists of three apps:
+Harvey consists of four apps:
 
 * __CMS__
-    An [Ember.js](http://emberjs.com) control panel app for managing your content.
+    [Ember.js](http://emberjs.com) control panel app for managing your content.
 * __API__
-    A backend for the CMS app, using the [JSON API](http://jsonapi.org/) spec and [Go lang](https://golang.org).
+    [Go lang](https://golang.org) backend for the CMS app, using the [JSON API](http://jsonapi.org/) spec.
 * __WEB__
-    A website frontend app, using [Go lang](https://golang.org) and supporting custom themes.
+    [Go lang](https://golang.org) website frontend app, supporting custom themes.
+* __CLI__
+    [Go lang](https://golang.org) command-line interface app for running tasks.
 
 ### Modules
 
