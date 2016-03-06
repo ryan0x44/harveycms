@@ -3,4 +3,4 @@ import:
 - package: github.com/manyminds/api2go
 - package: github.com/jinzhu/gorm
 - package: github.com/spf13/cobra
-- package: github.com/toml-lang/toml
+- package: github.com/spf13/viper

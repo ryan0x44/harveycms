@@ -1,5 +1,5 @@
 [db]
-host = "127.0.0.1"
+host = ""
 user = "dev"
 pass = "password"
 name = "harveycms"
