@@ -1,8 +1,12 @@
-hash: a5426df03cf52265e906b11d586006546ec7b0adbf80fc49999155288a1a8b3e
-updated: 2016-03-06T13:57:19.933812712+11:00
+hash: 317bcce9ddd0736c1543d25777905aa18a9175731a21946de305a43cf14d1988
+updated: 2016-03-22T21:22:44.629752238+11:00
 imports:
+- name: github.com/gorilla/context
+  version: 1ea25387ff6f684839d82767c1733ff4d4d15d0a
+- name: github.com/gorilla/mux
+  version: 0eeaf8392f5b04950925b8a69fe70f110fa7cbfc
 - name: github.com/jinzhu/gorm
-  version: f8377d80bf0d73b981c7ec39b7483776feedf79b
+  version: 021d7b33143de37b743d1cf660974e9c8d3f80ea
 - name: github.com/manyminds/api2go
   version: 0f0aba686fffe91897ee4b7e1d682efbfcbac7fd
 devImports: []

@@ -2,3 +2,5 @@ package: .
 import:
 - package: github.com/manyminds/api2go
 - package: github.com/jinzhu/gorm
+- package: github.com/gorilla/mux
+- package: github.com/gorilla/context
