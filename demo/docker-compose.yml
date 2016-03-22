@@ -2,12 +2,10 @@ version: "2"
 
 services:
   api:
-    build: ./api/.
+    build: ../api/.
     ports:
       - "5001:8080"
   web:
-    build: ./web/.
-    volumes:
-      - ./web:/app
+    build: ../web/.
     ports:
       - "5000:8080"
