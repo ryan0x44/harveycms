@@ -7,16 +7,29 @@ import (
 )
 
 type Route struct {
-	gorm.Model
-	Path   string `sql:"type:text;not null;unique_index"`
-	Module string `sql:"size:255;not null"`
-	Model  string `sql:"size:255"`
-	Entity int
-	Active bool `sql:"not_null"`
+	ID          uint `gorm:"primary_key"`
+	CreatedAt   time.Time
+	UpdatedAt   time.Time
+	Path        string `sql:"type:text;not null;unique_index"`
+	Module      string `sql:"size:255;not null"`
+	EntityModel string `sql:"size:255"`
+	EntityId    int
+	Active      bool `sql:"not_null"`
 }
 
 type Setting struct {
-	gorm.Model
-	Key   string `sql:"size:255;not null;unique_index"`
-	Value string `sql:"type:text"`
+	ID        uint `gorm:"primary_key"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
+	Key       string `sql:"size:255;not null;unique_index"`
+	Value     string `sql:"type:text"`
+}
+
+func DbInit(db *gorm.DB) {
+	if !db.HasTable(&Route{}) {
+		_ = db.CreateTable(&Route{})
+	}
+	if !db.HasTable(&Setting{}) {
+		_ = db.CreateTable(&Setting{})
+	}
 }

@@ -7,23 +7,30 @@ import (
 )
 
 type Page struct {
-	gorm.Model
+	ID        uint `gorm:"primary_key"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
+	Versions  []PageVersion
 }
 
 type PageVersion struct {
-	gorm.Model
+	ID          uint `gorm:"primary_key"`
+	CreatedAt   time.Time
+	UpdatedAt   time.Time
 	Page        Page
-	PageID      int
+	PageId      uint
 	Name        string `sql:"size:255;not null"`
 	IsPublished bool   `sql:"not_null"`
 	PublishedAt time.Time
 }
 
-func DbModel(db gorm.DB) {
-	_ = db.Model(&PageVersion{}).Related(&Page{})
-}
-
-func DbInit(db gorm.DB) {
-	_ = db.CreateTable(&Page{})
-	_ = db.CreateTable(&PageVersion{})
+func DbInit(db *gorm.DB) {
+	if !db.HasTable(&Page{}) {
+		db.CreateTable(&Page{})
+	}
+	if !db.HasTable(&PageVersion{}) {
+		db.CreateTable(&PageVersion{})
+		db.Model(&PageVersion{}).AddForeignKey("page_id", "pages(id)", "CASCADE", "RESTRICT")
+		db.Model(&PageVersion{}).AddUniqueIndex("is_published_unique", "page_id", "is_published")
+	}
 }

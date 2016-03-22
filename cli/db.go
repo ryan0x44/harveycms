@@ -3,11 +3,13 @@ package main
 
 import (
 	"fmt"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"github.com/ryan0x44/harveycms/core"
 	"github.com/ryan0x44/harveycms/modules/pages"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+	"log"
 )
 
 var DbInitCmd = &cobra.Command{
@@ -23,9 +25,8 @@ var DbInitCmd = &cobra.Command{
 			viper.Get("db.name"),
 		)
 		db := DbConnect(dbUrl)
-		db.CreateTable(&core.Route{})
-		db.CreateTable(&core.Setting{})
-		pages.DbModel(&db)
+		db.Set("gorm:table_options", "ENGINE=InnoDB")
+		core.DbInit(&db)
 		pages.DbInit(&db)
 	},
 }
