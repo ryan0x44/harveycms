@@ -2,7 +2,10 @@
 package main
 
 import (
+	"fmt"
+	"github.com/jinzhu/gorm"
 	"github.com/ryan0x44/harveycms/core"
+	"github.com/ryan0x44/harveycms/modules/pages"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -19,7 +22,18 @@ var DbInitCmd = &cobra.Command{
 			viper.Get("db.host"),
 			viper.Get("db.name"),
 		)
-		db := core.DbConnect(dbUrl)
+		db := DbConnect(dbUrl)
 		db.CreateTable(&core.Route{})
+		db.CreateTable(&core.Setting{})
+		pages.DbModel(&db)
+		pages.DbInit(&db)
 	},
+}
+
+func DbConnect(DbUrl string) gorm.DB {
+	db, err := gorm.Open("mysql", DbUrl)
+	if err != nil {
+		log.Panicf("Error connecting to database:\n%s", err)
+	}
+	return db
 }

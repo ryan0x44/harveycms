@@ -2,22 +2,21 @@
 package core
 
 import (
+	"github.com/jinzhu/gorm"
 	"time"
 )
 
 type Route struct {
-	Path      string `sql:"type:text;not null;unique_index"`
-	Module    string `sql:"size:255;not null"`
-	Model     string `sql:"size:255"`
-	Entity    int
-	Active    bool `sql:"not_null"`
-	CreatedAt time.Time
-	UpdatedAt time.Time
+	gorm.Model
+	Path   string `sql:"type:text;not null;unique_index"`
+	Module string `sql:"size:255;not null"`
+	Model  string `sql:"size:255"`
+	Entity int
+	Active bool `sql:"not_null"`
 }
 
 type Setting struct {
-	Key       string `sql:"size:255;not null;unique_index"`
-	Value     string `sql:"type:text"`
-	CreatedAt time.Time
-	UpdatedAt time.Time
+	gorm.Model
+	Key   string `sql:"size:255;not null;unique_index"`
+	Value string `sql:"type:text"`
 }
