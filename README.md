@@ -5,36 +5,36 @@
 __Please Note:__ This project is currently pre-alpha stage and should not be used for production environments.
 Please [join our mailing list](http://www.harveycms.org) if you're interested in keeping up-to-date with the latest project news.
 
-This project aims to implement a simple, elegant and easy-to-use CMS which is secure and highly scalable.
-For more information, check out our 'docs' subproject.
+This project aims to implement a simple, elegant and easy-to-use CMS which is secure and highly scalable. 
+For more information, check out the [docs](docs/) subproject.
 
 ## Subprojects
 
 Each folder in this repository represents a sub-project:
 
-* __api__
-    [Go lang](https://golang.org) backend for the CMS app, using the [JSON API](http://jsonapi.org/) spec.
+* __[api](api/)__
+    Go lang backend for the CMS app, using the [JSON API](http://jsonapi.org/) spec.
 
-* __cli__
-    [Go lang](https://golang.org) command-line interface app for running tasks.
+* __[cli](cli/)__
+    Go lang command-line interface app for running tasks.
 
-* __cms__
-    [Ember.js](http://emberjs.com) control panel app for managing your content.
+* __[cms](cms/)__
+    Ember.js control panel app for managing your content.
 
-* __core__
-    [Go lang](https://golang.org) core code library shared between api and web apps.
+* __[core](core/)__
+    Go lang core code library shared between api and web apps.
 
-* __demo__
+* __[demo](demo/)__
     Example Harvey CMS site directory containing demo config.
 
-* __docs__
+* __[docs](docs/)__
     Documentation website built with [Hugo](https://gohugo.io/) static site engine.
 
-* __modules__
+* __[modules](modules/)__
     Code modules shared between api and web apps.
 
-* __web__
-    [Go lang](https://golang.org) website frontend app, supporting custom themes.
+* __[web](web/)__
+    Go lang website frontend app, supporting custom themes.
 
 Eventually these subprojects will be given their own repositories.
 
