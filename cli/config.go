@@ -1,5 +1,5 @@
 // Copyright © 2016 Ryan D <ryan0x44.com>
-package main
+package cli
 
 import (
 	"github.com/spf13/viper"
