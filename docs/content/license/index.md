@@ -1,9 +1,9 @@
 ---
 date: 2016-04-11T19:12:46+01:00
-title: License
+title: Harvey CMS License
 ---
 
-The MIT License (MIT)
+## The MIT License (MIT)
 
 Copyright (c) 2016 Ryan D (ryan0x44.com)
 

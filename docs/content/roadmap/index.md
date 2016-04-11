@@ -1,12 +1,17 @@
-# To Do
+---
+date: 2016-04-11T19:12:46+01:00
+title: Harvey CMS Roadmap
+---
 
-Pre-Alpha
+More of a To Do list - here are some rough notes of future plans:
+
+## Pre-Alpha
 
 * Modules: website, users
 * Media/asset management with container/bucket support
 * Theming
 
-Alpha
+## Alpha
 
 * Modules: blog, forms
 * Page components
@@ -14,6 +19,6 @@ Alpha
 * Split projects (api/cli/cms/core/demo/org/web) into separate repositories
 * Set up CI server
 
-Beta
+## Beta
 
-* Add documentation to main website
+* Public documentation to main website

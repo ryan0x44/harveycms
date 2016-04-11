@@ -1,12 +1,7 @@
 ---
-date: 2016-03-09T00:11:02+01:00
-title: Getting started
+date: 2016-04-11T19:12:46+01:00
+title: Getting started with Harvey CMS
 ---
-
-{{< warning title="This documentation may be wrong" >}}
-Some documentation may be written before actual functionality is implemented!
-<br />As stated on the index of this site, this is pre-alpha software.
-{{< /warning >}}
 
 ## Installation
 
@@ -41,7 +36,9 @@ harvey new my-project
 This should create a directory structure like this:
 
 ```
-.
-|-- my-project/
-	|-- config.toml
+my-project
+|-- themes
+    |-- default
+        |-- base.html
+|-- config.toml
 ```

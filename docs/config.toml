@@ -50,14 +50,39 @@ googleAnalytics = ""
 	weight = 0
 
 [[menu.main]]
+	name   = "Concepts"
+	url    = "concepts/"
+	weight = 10
+
+[[menu.main]]
 	name   = "Getting started"
 	url    = "getting-started/"
-	weight = 10
+	weight = 20
+
+[[menu.main]]
+	name   = "Themes"
+	url    = "themes/"
+	weight = 30
+
+[[menu.main]]
+	name   = "Models"
+	url    = "models/"
+	weight = 40
+
+[[menu.main]]
+	name   = "Deployment"
+	url    = "deployment/"
+	weight = 50
 
 [[menu.main]]
 	name   = "License"
 	url    = "license/"
-	weight = 40
+	weight = 60
+
+[[menu.main]]
+	name   = "Roadmap"
+	url    = "roadmap/"
+	weight = 70
 
 
 [blackfriday]
